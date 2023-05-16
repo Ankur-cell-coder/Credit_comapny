@@ -64,7 +64,7 @@ const Pie1 = styled.div`
   margin-left: 519.5px;
   border: 2px solid black;
   margin-top: -340px;
-  width: 445px;
+  width: 440.3px;
 
   @media only screen and (min-width: 1800px) {
     width: 500px;

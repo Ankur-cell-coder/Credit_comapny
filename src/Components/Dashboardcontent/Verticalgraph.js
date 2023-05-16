@@ -66,10 +66,10 @@ const Dashboard1 = styled.div`
  
     
     height: 336.8px;
-    width: 567px;
+    width: 569px;
     border: 2px solid black;
     
-    margin-left:966px;
+    margin-left:962px;
     margin-top:-339.6px;
   
 `;

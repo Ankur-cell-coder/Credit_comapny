@@ -68,7 +68,7 @@ export default Horizontal1
 const Horizonta1 = styled.div`
 
   .class1{
-     width:560px;
+     width:517.3px;
      height:337px;
      margin-top:-30px;
      border:2px solid black;

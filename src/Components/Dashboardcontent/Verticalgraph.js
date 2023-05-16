@@ -65,10 +65,11 @@ export default Verticalgraph;
 const Dashboard1 = styled.div`
  
     
-    height: 335px;
+    height: 336.8px;
     width: 567px;
     border: 2px solid black;
-    margin-top:-339px
-    margin-left:100px;
+    
+    margin-left:966px;
+    margin-top:-339.6px;
   
 `;

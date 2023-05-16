@@ -26,7 +26,7 @@ const options = {
     },
     title: {
       display: true,
-      text: "Performance",
+      text: "Volumetric",
     },
   },
 };

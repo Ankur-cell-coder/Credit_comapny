@@ -17,10 +17,11 @@ function SignInForm(props) {
   return (
     <div className="maincontainer">
       <div className="imgcontainer">
-       <img src={limg} style={{width:'800px',height:'650px',marginTop:'-60px'}}></img>
+       <img src={limg} style={{width:'758px',height:'689px',marginTop:'-80px'}}></img>
       </div>
-      <div className="form-wrapper">
-      
+
+      <div style={{border:'2px solid blue',width:'800px',height:'708.4px',marginTop:'-100px',background:'blue'}}>
+      <div className="form-wrapper" style={{border:'2px solid blue',marginTop:'60px',marginLeft:'150px',background:'#ffffff'}}>
         <Formik {...props} validationSchema={validationSchema}>
           <div className="box">
             <div className="title">
@@ -67,7 +68,7 @@ function SignInForm(props) {
               <br />
               <Button
                 className="btn"
-                style={{ backgroundColor: "#8EBE00", border: "none" }}
+                style={{ backgroundColor: "blue", border: "none" }}
                 variant="danger"
                 size="lg"
                 block="block"
@@ -100,6 +101,7 @@ function SignInForm(props) {
             </div>
           </div>
         </Formik>
+        </div>
       </div>
     </div>
   );

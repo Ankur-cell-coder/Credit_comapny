@@ -20,7 +20,7 @@ const logout = function () {
 };
 
 function App() {
-  var colorvar = "black";
+  var colorvar = "blue";
   let loggedIn = false;
 
   const [option, setOption] = useState("seller");
@@ -108,7 +108,7 @@ function App() {
           <Nav>
             <div
               style={{
-                background: colorvar,
+                background: 'blue',
                 width: "180px",
                 height: "50px",
                 display: "flex",
@@ -117,7 +117,8 @@ function App() {
                 marginLeft: "20px",
               }}
             >
-              <img src={creditlogo}></img>
+              Credit Bazar
+              
             </div>
           </Nav>
         )}

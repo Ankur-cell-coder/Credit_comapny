@@ -19,16 +19,13 @@ const logout = function () {
   window.location.reload();
 };
 
-function App() {
+const App = () => {
   var colorvar = "blue";
   let loggedIn = false;
-
-  const [option, setOption] = useState("seller");
   (function () {
     let authToken = localStorage.getItem("JWT");
     if (authToken === null) {
-      loggedIn = false;
-
+      loggedIn = true;
       axios.defaults.headers.common.Authorization = null;
     } else {
       loggedIn = true;
@@ -36,10 +33,6 @@ function App() {
       axios.defaults.headers.common.Authorization = `Bearer ${authToken}`;
     }
   })();
-
-  const handleChange = (e) => {
-    setOption(e.currentTarget.value);
-  };
 
   return (
     <Router>
@@ -108,7 +101,7 @@ function App() {
           <Nav>
             <div
               style={{
-                background: 'blue',
+                background: "blue",
                 width: "180px",
                 height: "50px",
                 display: "flex",
@@ -118,7 +111,6 @@ function App() {
               }}
             >
               Credit Bazar
-              
             </div>
           </Nav>
         )}
@@ -171,6 +163,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;

@@ -2,8 +2,6 @@ import axios from "axios";
 import { Nav, Container, Row, Col } from "react-bootstrap";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
-
-import { useState } from "react";
 import SignIn from "./Components/signin/signin.component";
 import Companydetails from "./Components/Companydetails";
 import Autooffer from "./Components/Autooffer";
@@ -25,11 +23,10 @@ const App = () => {
   (function () {
     let authToken = localStorage.getItem("JWT");
     if (authToken === null) {
-      loggedIn = true;
+      loggedIn = false;
       axios.defaults.headers.common.Authorization = null;
     } else {
       loggedIn = true;
-
       axios.defaults.headers.common.Authorization = `Bearer ${authToken}`;
     }
   })();

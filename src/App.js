@@ -12,6 +12,7 @@ import Dataadapter from "./Components/Dataadapter";
 import Dashboard from "./Components/Dashboardcontent/Dashboard";
 import creditlogo from "./images/Credit bazaar logo.png";
 import Users from "./Components/company/Users";
+import Organizationdatacompany from "./Components/company/Organisationdata"
 
 const logout = function () {
   localStorage.removeItem("JWT");
@@ -157,6 +158,11 @@ const App = () => {
                     exact
                     path="/company/users"
                     element={loggedIn ? <Users /> : <SignIn />}
+                  />
+                   <Route
+                    exact
+                    path="/company/organizationdata"
+                    element={loggedIn ? <Organizationdatacompany /> : <SignIn />}
                   />
                   
                 </Routes>

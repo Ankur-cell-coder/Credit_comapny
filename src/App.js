@@ -3,14 +3,15 @@ import { Nav, Container, Row, Col } from "react-bootstrap";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import SignIn from "./Components/signin/signin.component";
-import Companydetails from "./Components/Companydetails";
+import Companydetails from "./Components/company/Companydetails";
 import Autooffer from "./Components/Autooffer";
-import Organizationdata from "./Components/Organizationdata";
+import Organizationdata from "./Components/Organizationdatanotsynced";
 import Activebird from "./Components/Activebird";
 import Finalizedbid from "./Components/Finalizedbid";
 import Dataadapter from "./Components/Dataadapter";
 import Dashboard from "./Components/Dashboardcontent/Dashboard";
 import creditlogo from "./images/Credit bazaar logo.png";
+import Users from "./Components/company/Users";
 
 const logout = function () {
   localStorage.removeItem("JWT");
@@ -152,6 +153,12 @@ const App = () => {
                     path="/dataadapter"
                     element={loggedIn ? <Dataadapter /> : <SignIn />}
                   />
+                  <Route
+                    exact
+                    path="/company/users"
+                    element={loggedIn ? <Users /> : <SignIn />}
+                  />
+                  
                 </Routes>
               </div>
             </Col>

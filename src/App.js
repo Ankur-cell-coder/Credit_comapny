@@ -12,7 +12,9 @@ import Dataadapter from "./Components/Dataadapter";
 import Dashboard from "./Components/Dashboardcontent/Dashboard";
 import creditlogo from "./images/Credit bazaar logo.png";
 import Users from "./Components/company/Users";
-import Organizationdatacompany from "./Components/company/Organisationdata"
+import Organizationdatacompany from "./Components/company/Organisationdata";
+import Revieworganizationdata from "./Components/company/Revieworganizationdata";
+import Autoacceptrule from "./Components/company/Autoacceptrule";
 
 const logout = function () {
   localStorage.removeItem("JWT");
@@ -159,12 +161,23 @@ const App = () => {
                     path="/company/users"
                     element={loggedIn ? <Users /> : <SignIn />}
                   />
-                   <Route
+                  <Route
                     exact
                     path="/company/organizationdata"
-                    element={loggedIn ? <Organizationdatacompany /> : <SignIn />}
+                    element={
+                      loggedIn ? <Organizationdatacompany /> : <SignIn />
+                    }
                   />
-                  
+                  <Route
+                    exact
+                    path="/company/revieworganizationdata"
+                    element={loggedIn ? <Revieworganizationdata /> : <SignIn />}
+                  />
+                  <Route
+                    exact
+                    path="/company/autoacceptrule"
+                    element={loggedIn ? <Autoacceptrule /> : <SignIn />}
+                  />
                 </Routes>
               </div>
             </Col>

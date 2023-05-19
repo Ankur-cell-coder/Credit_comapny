@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import HorizontalScroll from "react-scroll-horizontal";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -158,7 +159,9 @@ function Companydetails() {
           {data.map((val, key) => {
             return (
               <tr key={key}>
+                <Link to={'/company/autoacceptrule'} style={{textDecoration:'none'}}>
                 <td>{val.name}</td>
+                </Link>
                 <td>{val.id}</td>
                 <td>{val.status}</td>
                 <td>{val.class}</td>

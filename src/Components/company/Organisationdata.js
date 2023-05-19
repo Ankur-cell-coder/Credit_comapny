@@ -36,7 +36,7 @@ const data = [
     }
 ]
 
-function Users() {
+function Organisationdata() {
 
     
     const Navigate = useNavigate();
@@ -106,7 +106,7 @@ function Users() {
     )
 }
 
-export default Users
+export default Organisationdata
 
 const Users1 = styled.div`
 width:98.7%;

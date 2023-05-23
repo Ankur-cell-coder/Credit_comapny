@@ -1,9 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate,useLocation } from 'react-router-dom';
 
 function Autoacceptrule() {
-    var navigate=useNavigate;
+    const location = useLocation()
+    const { cname} = location.state
+
+    console.log({cname});
+    
   return (
     <Auto1>
         <div className='button'>
@@ -23,7 +27,7 @@ function Autoacceptrule() {
             <div className='input1section'>
                 <div>
                     Comapny Name 
-                    <input style={{width:'300px',height:'30px',marginLeft:'30px'}}/>
+                    <input style={{width:'300px',height:'30px',marginLeft:'30px'}} placeholder={cname}/>
                 </div>
 
                  <div>

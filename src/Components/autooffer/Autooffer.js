@@ -123,7 +123,7 @@ function Autooffer() {
               <tr key={key}>
                
                 <td>
-                <Link to={'/offerrule/offerdetail'} state={{ orgid:`${val.id}` }} style={{textDecoration:'none'}}>{val.id}</Link>
+                <Link to={'/offerrule/offerdetail'}  state={{ orgid:`${val.id}` }} style={{textDecoration:'none'}}>{val.id}</Link>
                   </td>
                 <td>{val.range}</td>
                 <td>{val.sector}</td>

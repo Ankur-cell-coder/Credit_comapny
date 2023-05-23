@@ -159,9 +159,11 @@ function Companydetails() {
           {data.map((val, key) => {
             return (
               <tr key={key}>
-                <Link to={'/company/autoacceptrule'} style={{textDecoration:'none'}}>
-                <td>{val.name}</td>
+                <td>
+                <Link to={'/company/autoacceptrule'} state={{cname:`${val.name}`}} style={{textDecoration:'none'}}>
+                {val.name}
                 </Link>
+                </td>
                 <td>{val.id}</td>
                 <td>{val.status}</td>
                 <td>{val.class}</td>

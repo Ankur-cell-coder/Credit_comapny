@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link, useNavigate } from 'react-router-dom';
 
 function Autoacceptrule() {
+    var navigate=useNavigate;
   return (
     <Auto1>
         <div className='button'>

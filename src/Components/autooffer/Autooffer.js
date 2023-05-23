@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import HorizontalScroll from "react-scroll-horizontal";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 const data = [
   {
@@ -80,6 +80,7 @@ const data = [
 ];
 
 function Autooffer() {
+  var navigate=useNavigate;
   return (
     <Company>
       <div className="uppersection">
@@ -121,7 +122,9 @@ function Autooffer() {
             return (
               <tr key={key}>
                
-                <td>{val.id}</td>
+                <td>
+                <Link to={'/offerrule/offerdetail'} state={{ orgid:`${val.id}` }} style={{textDecoration:'none'}}>{val.id}</Link>
+                  </td>
                 <td>{val.range}</td>
                 <td>{val.sector}</td>
                 <td>{val.tire}</td>
@@ -165,7 +168,7 @@ const Company = styled.div`
   table {
     border-top: 2px solid black;
     border-bottom:2px solid black;
-    width: 99.8%;
+    width: 99%;
     height: 160%;
     margin-top: 20px;
   }

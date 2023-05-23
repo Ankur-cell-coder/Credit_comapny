@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import SignIn from "./Components/signin/signin.component";
 import Companydetails from "./Components/company/Companydetails";
-import Autooffer from "./Components/Autooffer";
+import Autooffer from "./Components/autooffer/Autooffer";
 import Organizationdata from "./Components/Organizationdatanotsynced";
 import Activebird from "./Components/Activebird";
 import Finalizedbid from "./Components/Finalizedbid";
@@ -15,6 +15,7 @@ import Users from "./Components/company/Users";
 import Organizationdatacompany from "./Components/company/Organisationdata";
 import Revieworganizationdata from "./Components/company/Revieworganizationdata";
 import Autoacceptrule from "./Components/company/Autoacceptrule";
+import Autoofferdetai from "./Components/autooffer/Autoofferdetai";
 
 const logout = function () {
   localStorage.removeItem("JWT");
@@ -136,6 +137,11 @@ const App = () => {
                     path="/offerrule"
                     element={loggedIn ? <Autooffer /> : <SignIn />}
                   />
+                   <Route
+                    exact
+                    path="/offerrule/offerdetail"
+                    element={loggedIn ? <Autoofferdetai /> : <SignIn />}
+                  />
                   <Route
                     exact
                     path="/data"
@@ -178,6 +184,7 @@ const App = () => {
                     path="/company/autoacceptrule"
                     element={loggedIn ? <Autoacceptrule /> : <SignIn />}
                   />
+                 
                 </Routes>
               </div>
             </Col>

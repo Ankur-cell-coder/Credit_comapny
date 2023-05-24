@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Link, useNavigate,useLocation } from 'react-router-dom';
 
 function Autoacceptrule() {
     const location = useLocation()
-    const { cname} = location.state
+    const { cname,emailid} = location.state
+    
+//     const [companyname,setCompanyname]=useState("");
+//     const [email,setEmail]=useState("");
 
-    console.log({cname});
+//   useEffect(()=>{
+//     setCompanyname({cname});
+//   })
+  
     
   return (
     <Auto1>
@@ -27,12 +33,13 @@ function Autoacceptrule() {
             <div className='input1section'>
                 <div>
                     Comapny Name 
-                    <input style={{width:'300px',height:'30px',marginLeft:'30px'}} placeholder={cname}/>
+                    <input style={{width:'300px',height:'30px',marginLeft:'30px'}} value={cname}
+                    />
                 </div>
 
                  <div>
                     Email Address
-                    <input style={{width:'300px',height:'30px',marginLeft:'30px'}}/>
+                    <input style={{width:'300px',height:'30px',marginLeft:'30px'}} value={emailid}/>
                 </div>
             </div>
 

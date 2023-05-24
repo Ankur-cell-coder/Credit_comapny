@@ -153,7 +153,7 @@ function Organizationdatanotsynced() {
             <th>Email Address</th>
             <th>Invoice/Vouchers</th>
             <th>MSME Data</th>
-            <th>Datagov</th>
+            <th>Data.gov.in</th>
           </tr>
 
           {data.map((val, key) => {
@@ -172,76 +172,21 @@ function Organizationdatanotsynced() {
             );
           })}
         </table>
-        <table style={{width:'1550px',height:'450px'}}>
+
+        <table style={{width:'150px',height:'450px'}}>
           <tr>
-            <th>Registered State</th>
-            <th>Authorized Cap</th>
-            <th>Paidup Capital</th>
-            <th>Industrial Class</th>
-            <th>Principal Business Activity as per cin</th>
-            <th>Registered Office Address</th>
-            <th>Registrar of Companies </th>
+            <th>MCA Data</th>
           </tr>
 
           {data.map((val, key) => {
             return (
               <tr key={key}>
                 <td>{val.name}</td>
-                <td>{val.id}</td>
-                <td>{val.status}</td>
-                <td>{val.class}</td>
-                <td>{val.category}</td>
-                <td>{val.subcategory}</td>
-                <td>{val.date}</td>
               </tr>
             );
           })}
         </table> 
-        <table style={{ width: "1550px",height:'450px' }}>
-          <tr>
-            <th>Email Address </th>
-            <th>Latest Year Annual Return </th>
-            <th>Latest Year Financial Statement</th>
-            <th>Roc code</th>
-            <th>Registration Number</th>
-            <th>Number of Members</th>
-            <th>Date of Incorporation</th>
-          </tr>
 
-          {data.map((val, key) => {
-            return (
-              <tr key={key}>
-                <td>{val.name}</td>
-                <td>{val.id}</td>
-                <td>{val.status}</td>
-                <td>{val.class}</td>
-                <td>{val.category}</td>
-                <td>{val.subcategory}</td>
-                <td>{val.date}</td>
-              </tr>
-            );
-          })}
-        </table>
-        
-        <table style={{ width: "900px",height:'450px' }}>
-          <tr>
-            <th>Address Other </th>
-            <th>Company Listed Status</th>
-            <th>active_compliance</th>
-            <th>Suspended at Stock Exchange</th>
-          </tr>
-
-          {data.map((val, key) => {
-            return (
-              <tr key={key}>
-                <td>{val.name}</td>
-                <td>{val.id}</td>
-                <td>{val.status}</td>
-                <td>{val.class}</td>
-              </tr>
-            );
-          })}
-        </table>
       </HorizontalScroll>
 
       <div className="lowersection">

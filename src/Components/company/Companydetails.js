@@ -12,6 +12,7 @@ const data = [
     category: "Loreum ipsum",
     subcategory: "Loreum ipsum",
     date: "Loreum ipsum",
+    email:'loreumipsum@gmail.com',
   },
   {
     name: "Acme Corporation",
@@ -21,6 +22,7 @@ const data = [
     category: "Loreum ipsum",
     subcategory: "Loreum ipsum",
     date: "Loreum ipsum",
+    email:'loreumipsum@gmail.com',
   },
   {
     name: "Acme Corporation",
@@ -30,6 +32,7 @@ const data = [
     category: "Loreum ipsum",
     subcategory: "Loreum ipsum",
     date: "Loreum ipsum",
+    email:'loreumipsum@gmail.com',
   },
   {
     name: "Acme Corporation",
@@ -39,6 +42,7 @@ const data = [
     category: "Loreum ipsum",
     subcategory: "Loreum ipsum",
     date: "Loreum ipsum",
+    email:'loreumipsum@gmail.com',
   },
   {
     name: "Acme Corporation",
@@ -48,6 +52,7 @@ const data = [
     category: "Loreum ipsum",
     subcategory: "Loreum ipsum",
     date: "Loreum ipsum",
+    email:'loreumipsum@gmail.com',
   },
   {
     name: "Acme Corporation",
@@ -57,6 +62,7 @@ const data = [
     category: "Loreum ipsum",
     subcategory: "Loreum ipsum",
     date: "Loreum ipsum",
+    email:'loreumipsum@gmail.com',
   },
   {
     name: "Acme Corporation",
@@ -66,6 +72,7 @@ const data = [
     category: "Loreum ipsum",
     subcategory: "Loreum ipsum",
     date: "Loreum ipsum",
+    email:'loreumipsum@gmail.com',
   },
   {
     name: "Acme Corporation",
@@ -75,6 +82,7 @@ const data = [
     category: "Loreum ipsum",
     subcategory: "Loreum ipsum",
     date: "Loreum ipsum",
+    email:'loreumipsum@gmail.com',
   },
   {
     name: "Acme Corporation",
@@ -84,6 +92,7 @@ const data = [
     category: "Loreum ipsum",
     subcategory: "Loreum ipsum",
     date: "Loreum ipsum",
+    email:'loreumipsum@gmail.com',
   },
   {
     name: "Acme Corporation",
@@ -93,6 +102,7 @@ const data = [
     category: "Loreum ipsum",
     subcategory: "Loreum ipsum",
     date: "Loreum ipsum",
+    email:'loreumipsum@gmail.com',
   },
   {
     name: "Acme Corporation",
@@ -102,6 +112,7 @@ const data = [
     category: "Loreum ipsum",
     subcategory: "Loreum ipsum",
     date: "Loreum ipsum",
+    email:'loreumipsum@gmail.com',
   },
   {
     name: "Acme Corporation",
@@ -111,6 +122,7 @@ const data = [
     category: "Loreum ipsum",
     subcategory: "Loreum ipsum",
     date: "Loreum ipsum",
+    email:'loreumipsum@gmail.com',
   },
 ];
 
@@ -160,7 +172,7 @@ function Companydetails() {
             return (
               <tr key={key}>
                 <td>
-                <Link to={'/company/autoacceptrule'} state={{cname:`${val.name}`}} style={{textDecoration:'none'}}>
+                <Link to={'/company/autoacceptrule'} state={{cname:`${val.name}`,emailid:`${val.email}`}} style={{textDecoration:'none'}}>
                 {val.name}
                 </Link>
                 </td>
@@ -213,7 +225,7 @@ function Companydetails() {
           {data.map((val, key) => {
             return (
               <tr key={key}>
-                <td>{val.name}</td>
+                <td>{val.email}</td>
                 <td>{val.id}</td>
                 <td>{val.status}</td>
                 <td>{val.class}</td>

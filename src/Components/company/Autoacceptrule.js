@@ -23,51 +23,51 @@ function Autoacceptrule() {
             </div>
 
             <div className='input1section'>
-                <div>
-                    Comapny Name 
-                    <input style={{width:'300px',height:'30px',marginLeft:'30px'}} value={cname}
+                <div className='cont3'>
+                    <div className='des3'>Comapny Name</div>
+                    <input className='input1' value={cname}
                     />
                 </div>
 
-                 <div>
-                    Email Address
-                    <input style={{width:'300px',height:'30px',marginLeft:'30px'}} value={emailid}/>
+                 <div className='cont3'>
+                    <div className='des3'>Email Address</div>
+                    <input className='input1' value={emailid}/>
                 </div>
             </div>
 
            <div className='input2section'>
-               <div>
-                Phone Number 
+               <div className='cont3'>
+                <div className='des3'>Phone Number </div>
                 <input  placeholder='    + 91' style={{width:'100px',height:'30px',marginLeft:'30px'}}/>
-                <input style={{width:'300px',height:'30px',marginLeft:'30px'}}/>
+                <input className='input1'/>
 
                </div>
-               <div>
-                Company CIN 
-                <input style={{width:'300px',height:'30px',marginLeft:'30px'}}/>
+               <div className='cont3'>
+                <div className='des3'>Company CIN</div> 
+                <input className='input1'/>
                </div>
            </div>
 
            <div className='input3section'>
-             <div>
-                Trade Partner 
-                <input style={{width:'30px',height:'23px',marginLeft:'30px'}}/>
+             <div className='cont3'>
+                <div className='des3'>Trade Partner </div>
+                <input className='input3'/>
              </div>
-             <div>
-                Least Amount Of Money Lost
-                <input style={{width:'30px',height:'23px',marginLeft:'30px'}}/>
+             <div className='cont3'>
+                <div className='des3'>Least Amount Of Money Lost</div> 
+                <input className='input3'/>
              </div>
-             <div>
-                Ledger Statement
-                <input style={{width:'30px',height:'23px',marginLeft:'30px'}}/>
+             <div className='cont3'>
+                <div className='des3'>Ledger Statement</div>
+                <input className='input3'/>
              </div>
 
 
            </div>
 
            <div className='input4section'>
-              Other trade detail
-              <input style={{width:'1000px',height:'80px',marginLeft:'30px'}}/>
+             <div className='des4'>Other trade detail</div> 
+              <input className='input4'/>
            </div>
 
     </Auto1>
@@ -85,6 +85,10 @@ height:600px;
     .description{
         margin-left:40px;
         margin-top:10px;
+        @media only screen and (min-width: 1800px){
+            margin-top:30px;
+            font-size:20px;
+        }
     }
     .orderlink{
         margin-top:30px;
@@ -101,6 +105,12 @@ height:600px;
           .link-active {
             color: black;
             background: orange;
+          }
+
+          @media only screen and (min-width: 1800px){
+            width:900px;
+            margin-top:50px;
+            font-size:20px;
           }
       
     }
@@ -119,22 +129,88 @@ height:600px;
         display:flex;
         justify-content:space-between;
         width:1100px;
+       
+        @media only screen and (min-width: 1800px){
+            margin-top:70px;
+            margin-left:30px;
+            width:1600px;
+        }
+       
+
     }
     .input2section{
         margin-top:30px;
         display:flex;
         justify-content:space-between;
         width:1200px;
+        @media only screen and (min-width: 1800px){
+            margin-top:70px;
+            margin-left:30px;
+            width:1600px;
+        }
     }
     .input3section{
         margin-top:30px;
         display:flex;
         justify-content:space-between;
         width:800px;
+        @media only screen and (min-width: 1800px){
+            margin-top:70px;
+            margin-left:30px;
+            width:1750px;
+        }
     }
     .input4section{
         margin-top:60px;
+        display:flex;
+        @media only screen and (min-width: 1800px){
+            margin-top:100px;
+            margin-left:30px;
+        }
         
     }
- 
+    
+    .input4{
+         width:1000px;
+         height:80px;
+         marginLeft:30px;
+         @media only screen and (min-width: 1800px){
+            width:1600px;
+            height:100px;
+            margin-left:50px;
+         }
+    }
+    .des4{
+        @media only screen and (min-width:1800px){
+        margin-top:30px;
+        font-size:20px;
+        }
+    }
+    
+    .input3{
+        width:30px;
+        height:23px;
+        margin-left:30px;
+        @media only screen and (min-width:1800px){
+            margin-left:80px;
+        }
+    }
+    .cont3{
+        display:flex;
+    }
+    .des3{
+        font-size:20px;
+    }
+   
+    .input1{
+      width:300px;
+      height:30px;
+      margin-left:30px;
+      @media only screen and (min-width:1800px){
+        width:400px;
+        height:40px;
+        margin-top:-8px;
+        margin-left:60px;
+      }
+    }
 `;

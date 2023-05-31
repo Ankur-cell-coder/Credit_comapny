@@ -157,7 +157,7 @@ function Companydetails() {
       </div>
 
       <HorizontalScroll>
-        <table style={{width:'1550px',height:'450px'}}>
+        <table style={{width:'1550px',height:'810px'}}>
           <tr>
             <th>Company Name</th>
             <th>Corporate ID Number</th>
@@ -186,7 +186,7 @@ function Companydetails() {
             );
           })}
         </table>
-        <table style={{width:'1550px',height:'450px'}}>
+        <table style={{width:'1550px',height:'810px'}}>
           <tr>
             <th>Registered State</th>
             <th>Authorized Cap</th>
@@ -211,7 +211,7 @@ function Companydetails() {
             );
           })}
         </table> 
-        <table style={{ width: "1550px",height:'450px' }}>
+        <table style={{ width: "1550px",height:'810px' }}>
           <tr>
             <th>Email Address </th>
             <th>Latest Year Annual Return </th>
@@ -237,7 +237,7 @@ function Companydetails() {
           })}
         </table>
         
-        <table style={{ width: "900px",height:'450px' }}>
+        <table style={{ width: "900px",height:'810px' }}>
           <tr>
             <th>Address Other </th>
             <th>Company Listed Status</th>

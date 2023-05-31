@@ -6,14 +6,6 @@ function Autoacceptrule() {
     const location = useLocation()
     const { cname,emailid} = location.state
     
-//     const [companyname,setCompanyname]=useState("");
-//     const [email,setEmail]=useState("");
-
-//   useEffect(()=>{
-//     setCompanyname({cname});
-//   })
-  
-    
   return (
     <Auto1>
         <div className='button'>

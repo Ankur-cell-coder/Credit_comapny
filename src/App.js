@@ -16,6 +16,7 @@ import Organizationdatacompany from "./Components/company/Organisationdata";
 import Revieworganizationdata from "./Components/company/Revieworganizationdata";
 import Autoacceptrule from "./Components/company/Autoacceptrule";
 import Autoofferdetai from "./Components/autooffer/Autoofferdetai";
+import Finalizebiddetail from "./Components/Finalizebiddetail";
 
 const logout = function () {
   localStorage.removeItem("JWT");
@@ -156,6 +157,11 @@ const App = () => {
                     exact
                     path="/finalizedbids"
                     element={loggedIn ? <Finalizedbid /> : <SignIn />}
+                  />
+                  <Route
+                    exact
+                    path="/finalizedbids/details"
+                    element={loggedIn ? <Finalizebiddetail /> : <SignIn />}
                   />
                   <Route
                     exact

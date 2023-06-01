@@ -155,7 +155,7 @@ height:600px;
     justify-content:center;
     }
     table{
-        margin-top:15px;
+        margin-top:35px;
         border:2px solid black;
         margin-right:20px;
     }
@@ -166,7 +166,7 @@ height:600px;
       td {
         text-align: left;
         width:150px;
-        height:30px;
+        height:45px;
         border-bottom: 1px solid gray;
       }
       @media only screen and (min-width: 1800px){
@@ -177,6 +177,9 @@ height:600px;
     .lowersection{
         display:flex;
         width:750px;
+        @media only screen and (min-width: 1800px){
+            margin-top:20px;
+        }
         
     }
     

@@ -65,6 +65,9 @@ height:600px;
     .description{
         margin-left:40px;
         margin-top:10px;
+        @media only screen and (min-width: 1800px){
+            margin-top:20px;
+        }
     }
     .orderlink{
         margin-top:30px;
@@ -100,16 +103,25 @@ height:600px;
         border:2px solid black;
         margin-right:20px;
         height:100px;
+        @media only screen and (min-width: 1800px){
+            margin-top:30px;
+        }
     }
     th {
         border-bottom: 1px solid gray;
         text-align: left;
+        @media only screen and (min-width: 1800px){
+            height:40px;
+        }
       }
       td {
         text-align: left;
         width:150px;
         height:30px;
         border-bottom: 1px solid gray;
+        @media only screen and (min-width: 1800px){
+            height:40px;
+        }
       }
       @media only screen and (min-width: 1800px){
         width:98.9%;

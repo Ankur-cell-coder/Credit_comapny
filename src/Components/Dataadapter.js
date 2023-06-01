@@ -111,15 +111,10 @@ function Dataadapter() {
 
       <input
         placeholder="       Search"
-        style={{
-          width: "300px",
-          height: "30px",
-          marginTop: "30px",
-          marginLeft: "100px",
-        }}
+        className="searchinput"
       ></input>
 
-      <table style={{ width: "1550px", height: "450px" }}>
+      <table>
         <tr>
           <th>Data Source</th>
           <th>Status</th>
@@ -177,9 +172,11 @@ const Data1 = styled.div`
   table {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    width: 95.8%;
+    width: 100%;
     height: 160%;
     margin-top: 20px;
+    
+
   }
   .lowersection {
     margin-left: 10px;
@@ -187,13 +184,22 @@ const Data1 = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    @media only screen and (min-width:1800px){
+    font-size:20px;
+    }
   }
   th {
     border-bottom: 1px solid gray;
+    @media only screen and (min-width:1800px){
+    font-size:20px;
+    }
   }
   td {
     text-align: center;
     border-bottom: 1px solid gray;
+    @media only screen and (min-width:1800px){
+    font-size:20px;
+    }
   }
 
   .inputsection {
@@ -201,6 +207,9 @@ const Data1 = styled.div`
     display: flex;
     width: 1400px;
     justify-content: space-between;
+    @media only screen and (min-width:1800px){
+    font-size:20px;
+    }
   }
   .button1 {
     width: 185px;
@@ -209,6 +218,9 @@ const Data1 = styled.div`
     background: orange;
     border: 2px solid orange;
     color: white;
+    @media only screen and (min-width:1800px){
+    font-size:20px;
+    }
   }
   .button2 {
     width: 185px;
@@ -216,5 +228,21 @@ const Data1 = styled.div`
     margin-left: 30px;
     background: white;
     border: 2px solid white;
+    @media only screen and (min-width:1800px){
+    font-size:20px;
+    }
+  }
+
+  .searchinput{
+      width:300px;
+      height:30px;
+      margin-top:30px;
+      margin-left:100px;
+    
+      @media only screen and (min-width:1800px){
+        width:500px;
+        font-size:20px;
+        height:60px;
+      }
   }
 `;

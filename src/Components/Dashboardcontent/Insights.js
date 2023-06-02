@@ -30,8 +30,13 @@ export default Insights;
 const Insights1 = styled.div`
   border: 2px solid black;
   margin-left: 933px;
-  margin-top: -311.9px;
+  margin-top: -390px;
   height: 308.9px;
+
+  @media only screen and (min-width: 1800px){
+    height:385px;
+  }
+
   .heading {
     margin-left: 5px;
   }
@@ -43,6 +48,10 @@ const Insights1 = styled.div`
     margin-right:10px;
    height:260px;
    background:#C5C5C5;
+   font-size:20px;
+   @media only screen and (min-width: 1800px){
+    height:320px;
+  }
 
   }
 `;

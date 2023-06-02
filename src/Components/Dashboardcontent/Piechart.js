@@ -67,10 +67,10 @@ const Pie1 = styled.div`
   width: 440.3px;
 
   @media only screen and (min-width: 1800px) {
-    width: 500px;
-    height: 375px;
-    margin-left: 10px;
-    margin-top: 93px;
+    width: 620px;
+    height: 470px;
+    margin-left: 557px;
+    margin-top:-474px;
   }
 
   .graph {

@@ -71,5 +71,14 @@ const Dashboard1 = styled.div`
     
     margin-left:962px;
     margin-top:-339.6px;
+
+    @media only screen and (min-width: 1800px){
+      height: 470px;
+      width: 737px;
+      
+      margin-left:1179px;
+      margin-top:-474px;
+  
+    }
   
 `;

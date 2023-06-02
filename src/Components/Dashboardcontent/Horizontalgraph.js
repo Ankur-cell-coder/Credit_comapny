@@ -75,8 +75,8 @@ const Horizonta1 = styled.div`
      
      @media only screen and (min-width: 1800px){
        
-        width:455px;
-     height:310px;
+     width:555px;
+     height:470px;
      
      }
   }

@@ -47,16 +47,24 @@ const Data1=styled.div`
    width:930px;
    height:308.8px;
    margin-top:-1.4px;
+   @media only screen and (min-width: 1800px){
+      height:385px;
+    }
 
    table {
     // border: 2px solid forestgreen;
     width: 99.8%;
-       height:100%;
+      height:100%;
+     
    
    
    }
    td {
     border-bottom: 1px solid gray;
+    justify-content:center;
+   }
+   tr{
+      justify-content:center;
    }
    
 `;

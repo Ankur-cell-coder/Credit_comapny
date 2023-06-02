@@ -1,144 +1,48 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Await, Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-
-const data = [
-  {
-    name: "Loreum ipsum",
-    amount: "5000",
-    days: "10",
-    currentday: "12",
-    financier: "Loreum ipsum",
-    buyer: "Loreum ipsum",
-    status: "Loreum",
-    select: "Select",
-  },
-  {
-    name: "Loreum ipsum",
-    amount: "5000",
-    days: "10",
-    currentday: "12",
-    financier: "Loreum ipsum",
-    buyer: "Loreum ipsum",
-    status: "Loreum",
-    select: "Select",
-  },
-  {
-    name: "Loreum ipsum",
-    amount: "5000",
-    days: "10",
-    currentday: "12",
-    financier: "Loreum ipsum",
-    buyer: "Loreum ipsum",
-    status: "Loreum",
-    select: "Select",
-  },
-  {
-    name: "Loreum ipsum",
-    amount: "5000",
-    days: "10",
-    currentday: "12",
-    financier: "Loreum ipsum",
-    buyer: "Loreum ipsum",
-    status: "Loreum",
-    select: "Select",
-  },
-  {
-    name: "Loreum ipsum",
-    amount: "5000",
-    days: "10",
-    currentday: "12",
-    financier: "Loreum ipsum",
-    buyer: "Loreum ipsum",
-    status: "Loreum",
-    select: "Select",
-  },
-  {
-    name: "Loreum ipsum",
-    amount: "5000",
-    days: "10",
-    currentday: "12",
-    financier: "Loreum ipsum",
-    buyer: "Loreum ipsum",
-    status: "Loreum",
-    select: "Select",
-  },
-  {
-    name: "Loreum ipsum",
-    amount: "5000",
-    days: "10",
-    currentday: "12",
-    financier: "Loreum ipsum",
-    buyer: "Loreum ipsum",
-    status: "Loreum",
-    select: "Select",
-  },
-  {
-    name: "Loreum ipsum",
-    amount: "5000",
-    days: "10",
-    currentday: "12",
-    financier: "Loreum ipsum",
-    buyer: "Loreum ipsum",
-    status: "Loreum",
-    select: "Select",
-  },
-  {
-    name: "Loreum ipsum",
-    amount: "5000",
-    days: "10",
-    currentday: "12",
-    financier: "Loreum ipsum",
-    buyer: "Loreum ipsum",
-    status: "Loreum",
-    select: "Select",
-  },
-  {
-    name: "Loreum ipsum",
-    amount: "5000",
-    days: "10",
-    currentday: "12",
-    financier: "Loreum ipsum",
-    buyer: "Loreum ipsum",
-    status: "Loreum",
-    select: "Select",
-  },
-  {
-    name: "Loreum ipsum",
-    amount: "5000",
-    days: "10",
-    currentday: "12",
-    financier: "Loreum ipsum",
-    buyer: "Loreum ipsum",
-    status: "Loreum",
-    select: "Select",
-  },
-  {
-    name: "Loreum ipsum",
-    amount: "5000",
-    days: "10",
-    currentday: "12",
-    financier: "Loreum ipsum",
-    buyer: "Loreum ipsum",
-    status: "Loreum",
-    select: "Select",
-  },
-];
 
 function Finalizebid() {
   const [details, setDetails] = useState([]);
 
+  const getDetails = async () => {
+    const res = await axios.get("http://localhost:3005/finalized_bids");
+    setDetails(res.data.finalizebids);
+    console.log(details);
+  };
   useEffect(() => {
-    const getDetails = async () => {
-      const res = await axios.get("http://localhost:3005/finalized_bids");
-      console.log(res);
-      setDetails(res);
-     
-    };
-
     getDetails();
-  }, []);
+  }, [details.length]);
+
+  let [currentPage, setCurrentPage] = useState(1);
+  const recordsPerPage = 10;
+  const lastIndex = currentPage * recordsPerPage;
+  const firstIndex = lastIndex - recordsPerPage;
+  const records = details.slice(firstIndex, lastIndex);
+  const npage = Math.ceil(details.length / recordsPerPage);
+  const numbers = [...Array(npage + 1).keys()].slice(1);
+
+  function prePage(){
+        if(currentPage!==1)
+        {
+          setCurrentPage(currentPage-1);
+        }
+  }
+   
+  function changeCPage(id){
+        setCurrentPage(id);
+  }
+
+  function nextPage(){
+      
+        if(currentPage!==npage)
+        {
+          setCurrentPage(currentPage+1);
+        }
+      
+  }
 
   return (
     <Active1>
@@ -168,7 +72,7 @@ function Finalizebid() {
         ></input>
       </div>
 
-      <table >
+      <table>
         <tr>
           <th>Seller Name</th>
           <th>Amount</th>
@@ -180,38 +84,54 @@ function Finalizebid() {
           <th>Select</th>
         </tr>
 
-        {data.map((val, key) => {
+        {records?.map((val, key) => {
           return (
             <tr key={key}>
-              <td>{val.name}</td>
+              <td>{val.company_name}</td>
               <td>{val.amount}</td>
-              <td>{val.days}</td>
-              <td>{val.currentday}</td>
-              <td>{val.financier}</td>
-              <td>{val.buyer}</td>
-              <td>{val.status}</td>
+              <td>{val.no_of_days}</td>
+              <td>{val.current_day_number}</td>
+              <td>{val.financier_detail}</td>
+              <td>{val.buyers_detail}</td>
+              <td>Passed</td>
               <td>
-                <Link to={'/finalizedbids/details'} className='linkoption' style={{textDecoration:'none'}}>
-                {val.select}
+                <Link
+                  to={"/finalizedbids/details"}
+                  className="linkoption"
+                  style={{ textDecoration: "none" }}
+                >
+                  Select
                 </Link>
-                </td>
+              </td>
             </tr>
           );
         })}
       </table>
-      <div className="lowersection">
-        <div>Showing 1 to 12 enteries</div>
-        <div
-          style={{
-            display: "flex",
-            width: "200px",
-            justifyContent: "space-between",
-          }}
-        >
-          <div>Previous</div>
-          <div>Next</div>
-        </div>
-      </div>
+      <nav>
+        <ul className="pagination">
+          <li className="page-item">
+            <a href="#" className="page-link" onClick={prePage}>
+              Prev
+            </a>
+          </li>
+          {numbers.map((n, i) => (
+            <li
+              className={`page-item ${currentPage === n ? "active" : ""}`}
+              key={i}
+            >
+              <a href="#" className="page-link" onClick={()=>changeCPage(n)}>
+                {n}
+              </a>
+            </li>
+          ))}
+
+          <li className="page-item">
+            <a href="#" className="page-link" onClick={nextPage}>
+              Next
+            </a>
+          </li>
+        </ul>
+      </nav>
     </Active1>
   );
 }
@@ -219,28 +139,31 @@ function Finalizebid() {
 export default Finalizebid;
 
 const Active1 = styled.div`
-  width: 99.8%;
-  height: 580px;
   display: flex;
   flex-direction: column;
+  width:100%;
+  height: 910px;
+  margin-left:-110px;
+ 
 
   @media only screen and (min-width: 1800px) {
-    // border:2px solid red;
-    width: 98%;
-    height: 810px;
-    margin-left: 20px;
+    border:2px solid red;
+    width:1800px;
+    height: 910px;
+    margin-left:-100px;
+     
   }
 
   table {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    width:1550px;
-    height:450px;
+    width: 1550px;
+    height: 450px;
     margin-top: 20px;
     @media only screen and (min-width: 1800px) {
-      height:810px;
-      width:1870px;
-      margin-top:20px;
+      height: 810px;
+      width: 1870px;
+      margin-top: 20px;
     }
   }
   .lowersection {
@@ -251,11 +174,13 @@ const Active1 = styled.div`
     margin-top: 10px;
   }
   th {
+    text-align: center;
     border-bottom: 1px solid gray;
   }
   td {
     text-align: center;
     border-bottom: 1px solid gray;
+    width:5px;
   }
 
   .uppersection {
@@ -277,11 +202,11 @@ const Active1 = styled.div`
     height: 30px;
     justify-content: center;
   }
-  .linkoption{
-    border:1px solid black;
-    width:80px;
-    height:30px;
-    background-color:#F5F5F5;
-    color:black;
+  .linkoption {
+    border: 1px solid black;
+    width: 80px;
+    height: 30px;
+    background-color: #f5f5f5;
+    color: black;
   }
 `;

@@ -145,7 +145,7 @@ function Organizationdatanotsynced() {
       </div>
 
       <HorizontalScroll>
-        <table style={{width:'1550px',height:'450px'}}>
+        <table style={{width:'1950px'}}>
           <tr>
             <th>Company Name</th>
             <th>Corporate ID Number</th>
@@ -173,7 +173,7 @@ function Organizationdatanotsynced() {
           })}
         </table>
 
-        <table style={{width:'150px',height:'450px'}}>
+        <table style={{width:'150px'}}>
           <tr>
             <th>MCA Data</th>
           </tr>
@@ -224,9 +224,11 @@ const Company = styled.div`
   table {
     border-top: 2px solid black;
     border-bottom:2px solid black;
-    width: 99.8%;
-    height: 160%;
+    height:450px;
     margin-top: 20px;
+    @media only screen and (min-width: 1800px) {
+      height:810px;
+    }
   }
   .lowersection {
     margin-left: 10px;

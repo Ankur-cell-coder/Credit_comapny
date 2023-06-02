@@ -9,7 +9,7 @@ function Finalizebiddetail() {
       <div className="button">
         <Link
           to={"/finalizedbids"}
-          style={{ textDecoration: "none", marginTop: "5px", color: "black" }}
+          style={{ textDecoration: "none", marginTop: "5px", color: "black" ,fontSize:'20px'}}
         >
           &#8592; Finalizsed Bid
         </Link>
@@ -24,60 +24,60 @@ function Finalizebiddetail() {
         <div className="leftpart">
 
             <div className="content1">
-            <div>Seller Name:</div> 
-            <div>Loreum ipsum Loreum ipsum</div>
+            <div style={{fontSize:'20px'}}>Seller Name:</div> 
+            <div style={{fontSize:'20px'}}>Loreum ipsum Loreum ipsum</div>
             </div>
 
             <div className="content1">
-            <div>Amount:</div> 
-            <div>5000 INR</div>
+            <div style={{fontSize:'20px'}}>Amount:</div> 
+            <div style={{fontSize:'20px'}}>5000 INR</div>
             </div>
 
             <div className="content1">
-            <div>No.of Days:</div> 
-            <div>10</div>
+            <div style={{fontSize:'20px'}}>No.of Days:</div> 
+            <div style={{fontSize:'20px'}}>10</div>
             </div>
 
             <div className="content1">
-            <div>Current Day Number:</div> 
-            <div>12</div>
+            <div style={{fontSize:'20px'}}>Current Day Number:</div> 
+            <div style={{fontSize:'20px'}}>12</div>
             </div>
 
         </div>
 
         <div className="rightpart">
             <div className="content1">
-            <div>Financier Details:</div> 
-            <div>Loreum ipsum </div>
+            <div style={{fontSize:'20px'}}>Financier Details:</div> 
+            <div style={{fontSize:'20px'}}>Loreum ipsum </div>
             </div>
 
             <div className="content1">
-            <div>Buyers Details:</div> 
-            <div>Loreum ipsum </div>
+            <div style={{fontSize:'20px'}}>Buyers Details:</div> 
+            <div style={{fontSize:'20px'}}>Loreum ipsum </div>
             </div>
 
             <div className="content1">
-            <div>Status:</div> 
-            <div>Loreum ipsum </div>
+            <div style={{fontSize:'20px'}}>Status:</div> 
+            <div style={{fontSize:'20px'}}>Loreum ipsum </div>
             </div>
 
             <div className="content1">
-            <div>Bank Account Details:</div> 
-            <div>Loreum ipsum </div>
+            <div style={{fontSize:'20px'}}>Bank Account Details:</div> 
+            <div style={{fontSize:'20px'}}>Loreum ipsum </div>
             </div>
         </div>
 
       </div>
 
-      <div>
+      <div style={{fontSize:'20px'}}>
         Terms & Conditions:
       </div>
 
       <div className="tcdetail">
-      <div>If you're visiting this page, you're likely here because you're searching for a random sentence.Sometimes a random word just isn't enough, and that is where the random sentence generator comes into play.</div>
-      <div>Sometimes a random word just isn't enough, and that is where the random seplay.Sometimes a random word just isn't enough, and that is where the random sentence generator comes into play. </div>
-      <div>By inputting the desired number, you can make a list of aentences as you want or needSometimes a random word just isn't enough, and that is where the random sentence generator comes into play.. </div>
-      <div>Producing random sentences can be helpful in a number of different ways.Sometimes a random word just isn't enough, and that is where the random sentence generator comes into play.</div>
+      <div style={{fontSize:'20px'}}>If you're visiting this page, you're likely here because you're searching for a random sentence.Sometimes a random word just isn't enough, and that is where the random sentence generator comes into play.</div>
+      <div style={{fontSize:'20px'}}>Sometimes a random word just isn't enough, and that is where the random seplay.Sometimes a random word just isn't enough, and that is where the random sentence generator comes into play. </div>
+      <div style={{fontSize:'20px'}}>By inputting the desired number, you can make a list of aentences as you want or needSometimes a random word just isn't enough, and that is where the random sentence generator comes into play.. </div>
+      <div style={{fontSize:'20px'}}>Producing random sentences can be helpful in a number of different ways.Sometimes a random word just isn't enough, and that is where the random sentence generator comes into play.</div>
       </div>
 
 
@@ -102,6 +102,10 @@ const Finalize1 = styled.div`
         margin-right:20px;
         height:30px;
         border-bottom:2px solid black;
+        font-size:20px;
+        @media only screen and (min-width: 1800px){
+          height:60px;
+        }
     }
 
     .button{
@@ -120,6 +124,11 @@ const Finalize1 = styled.div`
         width:1200px;
         justify-content:space-between;
         margin-left:50px;
+        @media only screen and (min-width: 1800px){
+          margin-top:60px;
+          margin-bottom:40px;
+          width:1600px;
+        }
         
     }
 
@@ -128,11 +137,19 @@ const Finalize1 = styled.div`
         justify-content:space-between;
         width:400px;
         height:70px;
+        @media only screen and (min-width: 1800px){
+          width:600px;
+          height:90px;
+        }
        
     }
 
     .tcdetail{
         margin-top:30px;
+        @media only screen and (min-width: 1800px)
+        {
+          margin-top:50px;
+        }
     }
 
 

@@ -101,11 +101,11 @@ const data = [
   },
 ];
 
-function Dataadapter() {
+function Dataadapterpeoples() {
   return (
     <Data1>
       <div>
-      <Link className="button1" to={'/dataadapter'}>Organisation Data</Link>
+        <Link className="button1" to={'/dataadapter'}>Organisation Data</Link>
         <Link className="button2" to={'/peoplesdata'}>Peoples Data</Link>
       </div>
 
@@ -154,7 +154,7 @@ function Dataadapter() {
   );
 }
 
-export default Dataadapter;
+export default Dataadapterpeoples;
 
 const Data1 = styled.div`
   width: 99.8%;
@@ -215,8 +215,8 @@ const Data1 = styled.div`
     width: 185px;
     height: 35px;
     margin-left: 30px;
-    background: orange;
-    border: 2px solid orange;
+    background: white;
+    border: 2px solid white;
     color: white;
     @media only screen and (min-width:1800px){
     font-size:20px;
@@ -226,8 +226,8 @@ const Data1 = styled.div`
     width: 185px;
     height: 35px;
     margin-left: 30px;
-    background: white;
-    border: 2px solid white;
+    background: orange;
+    border: 2px solid orange;
     @media only screen and (min-width:1800px){
     font-size:20px;
     }

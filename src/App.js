@@ -17,6 +17,7 @@ import Revieworganizationdata from "./Components/company/Revieworganizationdata"
 import Autoacceptrule from "./Components/company/Autoacceptrule";
 import Autoofferdetai from "./Components/autooffer/Autoofferdetai";
 import Finalizebiddetail from "./Components/Finalizebiddetail";
+import Dataadapterpeoples from "./Components/Dataadapterpeoples";
 
 const logout = function () {
   localStorage.removeItem("JWT");
@@ -190,6 +191,12 @@ const App = () => {
                     path="/company/autoacceptrule"
                     element={loggedIn ? <Autoacceptrule /> : <SignIn />}
                   />
+                   <Route
+                    exact
+                    path="/peoplesdata"
+                    element={loggedIn ? <Dataadapterpeoples/> : <SignIn />}
+                  />
+                  
                  
                 </Routes>
               </div>

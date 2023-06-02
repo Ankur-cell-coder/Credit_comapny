@@ -74,7 +74,7 @@ function Activebird() {
       </div>
 
     
-        <table style={{width:'1550px',height:'450px'}}>
+        <table >
           <tr>
             <th>Seller Name</th>
             <th>Amount</th>
@@ -119,10 +119,11 @@ export default Activebird
 
 const Active1=styled.div`
 
-width: 99.8%;
+
 height: 580px;
 display: flex;
 flex-direction: column;
+
 
 @media only screen and (min-width: 1800px) {
   // border:2px solid red;
@@ -134,9 +135,14 @@ flex-direction: column;
 table {
   border-top: 2px solid black;
   border-bottom:2px solid black;
-  width: 99.8%;
-  height: 160%;
+  
   margin-top: 20px;
+  height:450px;
+  width:1550px;
+  @media only screen and (min-width: 1800px){
+    height:810px;
+    width:1880px;
+  }
 }
 .lowersection {
   margin-left: 10px;

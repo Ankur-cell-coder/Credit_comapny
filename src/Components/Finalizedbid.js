@@ -168,7 +168,7 @@ function Finalizebid() {
         ></input>
       </div>
 
-      <table style={{ width: "1550px", height: "450px" }}>
+      <table >
         <tr>
           <th>Seller Name</th>
           <th>Amount</th>
@@ -234,9 +234,14 @@ const Active1 = styled.div`
   table {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    width: 99.8%;
-    height: 160%;
+    width:1550px;
+    height:450px;
     margin-top: 20px;
+    @media only screen and (min-width: 1800px) {
+      height:810px;
+      width:1870px;
+      margin-top:20px;
+    }
   }
   .lowersection {
     margin-left: 10px;

@@ -6,19 +6,13 @@ function Autoofferdetai() {
   const location = useLocation();
   const { orgid } = location.state;
 
-  //   const [organisationId,setOrganisationId]=useState("");
-
-  //   useEffect(()=>{
-  //     setOrganisationId(orgid);
-  //   })
-  //   value={organisationId}
 
   return (
     <Auto1>
       <div className="button">
         <Link
           to={"/offerrule"}
-          style={{ textDecoration: "none", marginTop: "5px", color: "black" }}
+          style={{ textDecoration: "none", marginTop: "5px", color: "black",fontSize:'20px' }}
         >
           &#8592; Organisation List
         </Link>
@@ -29,29 +23,30 @@ function Autoofferdetai() {
       </div>
 
       <div className="first">
-        <div>Organisation ID:</div>
+        <div style={{fontSize:'20px'}}>Organisation ID:</div>
         <input
-          style={{ width: "200px", height: "30px", marginLeft: "50px" }}
+          style={{ width: "200px", height: "30px", marginLeft: "50px" ,fontSize:'20px'}}
           value={orgid}
         />
       </div>
 
       <div className="second">
-        <div>Amount Range of Financing:</div>
+        <div style={{fontSize:'20px'}}>Amount Range of Financing:</div>
         <input
           style={{
             width: "150px",
             height: "30px",
             marginLeft: "50px",
             marginRight: "50px",
+            fontSize:'20px'
           }}
         />
         <div>-</div>
-        <input style={{ width: "150px", height: "30px", marginLeft: "50px" }} />
+        <input style={{ width: "150px", height: "30px", marginLeft: "50px",fontSize:'20px' }} />
       </div>
 
       <div className="third">
-        <div>Domain Sector Related Financing:</div>
+        <div style={{fontSize:'20px'}}>Domain Sector Related Financing:</div>
         <div style={{ display: "flex", marginTop: "30px" }}>
           <div>Loreum ipsum</div>
           <input
@@ -118,22 +113,35 @@ const Auto1 = styled.div`
     font-size: 18px;
     display: flex;
     justify-content: center;
+    @media only screen and (min-width: 1800px) {
+      width: 350px;
+      height: 55px;
+    }
   }
   .description {
     margin-left: 40px;
     margin-top: 10px;
+    font-size:20px;
+    @media only screen and (min-width: 1800px){
+      margin-top:30px;
+      margin-bottom:40px;
+    }
+    
   }
 
   .first {
     display: flex;
     margin-top: 40px;
+    font-size:20px;
   }
 
   .second {
     display: flex;
     margin-top: 40px;
+    font-size:20px;
   }
   .third {
     margin-top: 40px;
+    font-size:20px;
   }
 `;

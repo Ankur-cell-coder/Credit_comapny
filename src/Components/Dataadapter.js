@@ -104,9 +104,13 @@ const data = [
 function Dataadapter() {
   return (
     <Data1>
-      <div>
-      <Link className="button1" to={'/dataadapter'}>Organisation Data</Link>
-        <Link className="button2" to={'/peoplesdata'}>Peoples Data</Link>
+      <div style={{display:'flex'}}>
+        <div className="button1">
+      <Link style={{textDecoration:'none',color:'white'}} to={'/dataadapter'}>Organisation Data</Link>
+      </div>
+      <div className="button2">
+        <Link style={{textDecoration:'none',color:'black'}} to={'/peoplesdata'}>Peoples Data</Link>
+        </div>
       </div>
 
       <input

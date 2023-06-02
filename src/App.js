@@ -6,7 +6,7 @@ import SignIn from "./Components/signin/signin.component";
 import Companydetails from "./Components/company/Companydetails";
 import Autooffer from "./Components/autooffer/Autooffer";
 import Organizationdata from "./Components/Organizationdatanotsynced";
-import Activebird from "./Components/Activebird";
+import Activebird from "./Components/Activebids";
 import Finalizedbid from "./Components/Finalizedbid";
 import Dataadapter from "./Components/Dataadapter";
 import Dashboard from "./Components/Dashboardcontent/Dashboard";

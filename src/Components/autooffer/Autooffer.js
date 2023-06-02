@@ -110,7 +110,7 @@ function Autooffer() {
       </div>
 
      
-        <table style={{width:'1550px',height:'450px'}}>
+        <table >
           <tr>
             <th>Organisation ID</th>
             <th>Amount range of financing</th>

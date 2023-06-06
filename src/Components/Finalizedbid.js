@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Await, Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 
 function Finalizebid() {
@@ -18,30 +17,55 @@ function Finalizebid() {
 
   let [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 10;
+
   const lastIndex = currentPage * recordsPerPage;
   const firstIndex = lastIndex - recordsPerPage;
+
   const records = details.slice(firstIndex, lastIndex);
+
+  //code for displaying current page range
   const npage = Math.ceil(details.length / recordsPerPage);
   const numbers = [...Array(npage + 1).keys()].slice(1);
-
-  function prePage(){
-        if(currentPage!==1)
-        {
-          setCurrentPage(currentPage-1);
-        }
+  var till = 10;
+  if (npage < 10) {
+    till = npage;
   }
+  var numbers_series = numbers.slice(0, till);
+  if (npage > 10 && currentPage > 5) {
+    if (currentPage < npage) {
+      numbers_series = numbers.slice(currentPage - 9, currentPage + 1);
+    } else if (currentPage == npage) {
+      numbers_series = numbers.slice(currentPage - 10, currentPage);
+    }
    
-  function changeCPage(id){
-        setCurrentPage(id);
   }
 
-  function nextPage(){
-      
-        if(currentPage!==npage)
-        {
-          setCurrentPage(currentPage+1);
-        }
-      
+  //variable for color variable....
+  var color_prev = "red";
+  var color_next = "red";
+
+  if (currentPage == 1) {
+    color_prev = "gray";
+  }
+  if (currentPage == npage) {
+    color_next = "gray";
+  }
+
+  function prePage() {
+    if (currentPage !== 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  }
+
+  function changeCPage(id) {
+    console.log(id.val);
+    setCurrentPage(id.val);
+  }
+
+  function nextPage() {
+    if (currentPage !== npage) {
+      setCurrentPage(currentPage + 1);
+    }
   }
 
   return (
@@ -107,31 +131,55 @@ function Finalizebid() {
           );
         })}
       </table>
-      <nav>
-        <ul className="pagination">
-          <li className="page-item">
-            <a href="#" className="page-link" onClick={prePage}>
-              Prev
-            </a>
-          </li>
-          {numbers.map((n, i) => (
-            <li
-              className={`page-item ${currentPage === n ? "active" : ""}`}
-              key={i}
+      <div className="lowersection">
+        <div>Showing 1 to 10 enteries</div>
+        <div
+          style={{
+            display: "flex",
+            width: "1000px",
+            justifyContent: "space-between",
+          }}
+        >
+          <div>
+            <button
+              onClick={prePage}
+              style={{
+                width: "100px",
+                height: "30px",
+                background: color_prev,
+                color: "white",
+              }}
             >
-              <a href="#" className="page-link" onClick={()=>changeCPage(n)}>
-                {n}
-              </a>
-            </li>
-          ))}
-
-          <li className="page-item">
-            <a href="#" className="page-link" onClick={nextPage}>
+              Previous
+            </button>
+          </div>
+          <div>
+            {numbers_series.map((val, key) => {
+              return (
+                <button
+                  onClick={() => changeCPage({ val })}
+                  className="toggle_button"
+                >
+                  {val}
+                </button>
+              );
+            })}
+          </div>
+          <div>
+            <button
+              onClick={nextPage}
+              style={{
+                width: "100px",
+                height: "30px",
+                background: color_next,
+                color: "white",
+              }}
+            >
               Next
-            </a>
-          </li>
-        </ul>
-      </nav>
+            </button>
+          </div>
+        </div>
+      </div>
     </Active1>
   );
 }
@@ -142,28 +190,33 @@ const Active1 = styled.div`
   display: flex;
   flex-direction: column;
   width:100%;
-  height: 910px;
-  margin-left:-110px;
- 
-
-  @media only screen and (min-width: 1800px) {
-    border:2px solid red;
-    width:1800px;
-    height: 910px;
-    margin-left:-100px;
-     
-  }
+  height:100%;
 
   table {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    width: 1550px;
+    width:100%;
     height: 450px;
-    margin-top: 20px;
+    // margin-top: 20px;
     @media only screen and (min-width: 1800px) {
       height: 810px;
-      width: 1870px;
+      width: 100%;
       margin-top: 20px;
+    }
+  }
+
+  .toggle_button {
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+    background: black;
+    color: white;
+    :hover {
+      background: red;
+    }
+    :active,
+    :focus {
+      background: red;
     }
   }
   .lowersection {
@@ -180,7 +233,6 @@ const Active1 = styled.div`
   td {
     text-align: center;
     border-bottom: 1px solid gray;
-    width:5px;
   }
 
   .uppersection {

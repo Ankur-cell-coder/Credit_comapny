@@ -6,6 +6,7 @@ function Autoacceptrule() {
     const location = useLocation()
     const { cname,emailid} = location.state
     
+    
   return (
     <Auto1>
         <div className='button'>

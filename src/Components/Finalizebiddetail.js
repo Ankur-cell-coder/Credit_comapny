@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Finalizebiddetail() {
+
+  const location=useLocation();
+
+  const {seller,amount,f_detail,b_detail,no_days,c_day}=location.state;
+
   return (
     <Finalize1>
 
@@ -24,45 +29,45 @@ function Finalizebiddetail() {
         <div className="leftpart">
 
             <div className="content1">
-            <div style={{fontSize:'20px'}}>Seller Name:</div> 
-            <div style={{fontSize:'20px'}}>Loreum ipsum Loreum ipsum</div>
+            <div style={{fontSize:'20px',width:'220px'}}>Seller Name:</div> 
+            <div style={{fontSize:'20px'}}>{seller}</div>
             </div>
 
             <div className="content1">
-            <div style={{fontSize:'20px'}}>Amount:</div> 
-            <div style={{fontSize:'20px'}}>5000 INR</div>
+            <div style={{fontSize:'20px',width:'220px'}}>Amount:</div> 
+            <div style={{fontSize:'20px'}}>{amount} INR</div>
             </div>
 
             <div className="content1">
-            <div style={{fontSize:'20px'}}>No.of Days:</div> 
-            <div style={{fontSize:'20px'}}>10</div>
+            <div style={{fontSize:'20px',width:'220px'}}>No.of Days:</div> 
+            <div style={{fontSize:'20px'}}>{no_days}</div>
             </div>
 
             <div className="content1">
-            <div style={{fontSize:'20px'}}>Current Day Number:</div> 
-            <div style={{fontSize:'20px'}}>12</div>
+            <div style={{fontSize:'20px',width:'220px'}}>Current Day Number:</div> 
+            <div style={{fontSize:'20px'}}>{c_day}</div>
             </div>
 
         </div>
 
         <div className="rightpart">
             <div className="content1">
-            <div style={{fontSize:'20px'}}>Financier Details:</div> 
-            <div style={{fontSize:'20px'}}>Loreum ipsum </div>
+            <div style={{fontSize:'20px',width:'220px'}}>Financier Details:</div> 
+            <div style={{fontSize:'20px'}}>{f_detail} </div>
             </div>
 
             <div className="content1">
-            <div style={{fontSize:'20px'}}>Buyers Details:</div> 
-            <div style={{fontSize:'20px'}}>Loreum ipsum </div>
+            <div style={{fontSize:'20px',width:'220px'}}>Buyers Details:</div> 
+            <div style={{fontSize:'20px'}}>{b_detail} </div>
             </div>
 
             <div className="content1">
-            <div style={{fontSize:'20px'}}>Status:</div> 
-            <div style={{fontSize:'20px'}}>Loreum ipsum </div>
+            <div style={{fontSize:'20px',width:'220px'}}>Status:</div> 
+            <div style={{fontSize:'20px'}}>Passed </div>
             </div>
 
             <div className="content1">
-            <div style={{fontSize:'20px'}}>Bank Account Details:</div> 
+            <div style={{fontSize:'20px',width:'220px'}}>Bank Account Details:</div> 
             <div style={{fontSize:'20px'}}>Loreum ipsum </div>
             </div>
         </div>
@@ -124,21 +129,23 @@ const Finalize1 = styled.div`
         width:1200px;
         justify-content:space-between;
         margin-left:50px;
+        // border:2px solid black;
         @media only screen and (min-width: 1800px){
           margin-top:60px;
           margin-bottom:40px;
-          width:1600px;
+          width:1780px;
         }
         
     }
 
     .content1{
         display:flex;
-        justify-content:space-between;
+      //  justify-content:space-between;
         width:400px;
         height:70px;
+        // border:2px solid red;
         @media only screen and (min-width: 1800px){
-          width:600px;
+          width:850px;
           height:90px;
         }
        

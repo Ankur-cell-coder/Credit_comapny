@@ -31,7 +31,7 @@ function Finalizebid() {
     till = npage;
   }
   var numbers_series = numbers.slice(0, till);
-  if (npage > 10 && currentPage > 5) {
+  if (npage > 10 && currentPage >=10) {
     if (currentPage < npage) {
       numbers_series = numbers.slice(currentPage - 9, currentPage + 1);
     } else if (currentPage == npage) {
@@ -123,6 +123,7 @@ function Finalizebid() {
                   to={"/finalizedbids/details"}
                   className="linkoption"
                   style={{ textDecoration: "none" }}
+                  state={{seller:`${val.company_name}`,amount:`${val.amount}`,f_detail:`${val.financier_detail}`,b_detail:`${val.buyers_detail}`,no_days:`${val.no_of_days}`,c_day:`${val.current_day_number}`}}
                 >
                   Select
                 </Link>
@@ -199,7 +200,7 @@ const Active1 = styled.div`
     height: 450px;
     // margin-top: 20px;
     @media only screen and (min-width: 1800px) {
-      height: 810px;
+      height: 700px;
       width: 100%;
       margin-top: 20px;
     }
